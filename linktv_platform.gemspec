@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{linktv_platform}
-  s.version = "0.9.0"
+  s.version = "0.9.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Definition LLC (Rob DiCiuccio, Doug Puchalski, Evan Rusackas) for Link Media, Inc."]
@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
     "MIT-LICENSE",
     "README.markdown",
     "Rakefile",
+    "VERSION",
     "app/controllers/admin/admin_controller.rb",
     "app/controllers/admin/content_sources_controller.rb",
     "app/controllers/admin/content_types_controller.rb",
@@ -596,6 +597,36 @@ Gem::Specification.new do |s|
     "db/migrate/authlogic/20100000010000_create_authlogic_user_fields.rb",
     "db/migrate/data/README",
     "db/seeds.rb",
+    "generators/linktv_platform/linktv_platform_install_generator.rb",
+    "generators/linktv_platform/templates/db/migrate/0302_linktv_platform_create_content_sources.rb",
+    "generators/linktv_platform/templates/db/migrate/0303_linktv_platform_create_content_type_semantic_apis.rb",
+    "generators/linktv_platform/templates/db/migrate/0304_linktv_platform_create_content_types.rb",
+    "generators/linktv_platform/templates/db/migrate/0305_linktv_platform_create_countries.rb",
+    "generators/linktv_platform/templates/db/migrate/0500_linktv_platform_create_entity_dbs.rb",
+    "generators/linktv_platform/templates/db/migrate/0501_linktv_platform_create_entity_identifiers.rb",
+    "generators/linktv_platform/templates/db/migrate/0502_linktv_platform_create_external_contents.rb",
+    "generators/linktv_platform/templates/db/migrate/0700_linktv_platform_create_geo_ip_caches.rb",
+    "generators/linktv_platform/templates/db/migrate/0701_linktv_platform_create_geo_restrictions.rb",
+    "generators/linktv_platform/templates/db/migrate/0900_linktv_platform_create_images.rb",
+    "generators/linktv_platform/templates/db/migrate/0901_linktv_platform_create_imported_videos.rb",
+    "generators/linktv_platform/templates/db/migrate/1200_linktv_platform_create_links.rb",
+    "generators/linktv_platform/templates/db/migrate/1600_linktv_platform_create_pages.rb",
+    "generators/linktv_platform/templates/db/migrate/1602_linktv_platform_create_playlists.rb",
+    "generators/linktv_platform/templates/db/migrate/1603_linktv_platform_create_playlist_items.rb",
+    "generators/linktv_platform/templates/db/migrate/1800_linktv_platform_create_region_videos.rb",
+    "generators/linktv_platform/templates/db/migrate/1801_linktv_platform_create_regions.rb",
+    "generators/linktv_platform/templates/db/migrate/1802_linktv_platform_create_resource_attrs.rb",
+    "generators/linktv_platform/templates/db/migrate/1803_linktv_platform_create_roles.rb",
+    "generators/linktv_platform/templates/db/migrate/1804_linktv_platform_create_roles_users.rb",
+    "generators/linktv_platform/templates/db/migrate/1900_linktv_platform_create_semantic_apis.rb",
+    "generators/linktv_platform/templates/db/migrate/2000_linktv_platform_create_topic_video_segments.rb",
+    "generators/linktv_platform/templates/db/migrate/2001_linktv_platform_create_topics.rb",
+    "generators/linktv_platform/templates/db/migrate/2100_linktv_platform_create_users.rb",
+    "generators/linktv_platform/templates/db/migrate/2200_linktv_platform_create_video_files.rb",
+    "generators/linktv_platform/templates/db/migrate/2201_linktv_platform_create_video_play_stats.rb",
+    "generators/linktv_platform/templates/db/migrate/2202_linktv_platform_create_video_segments.rb",
+    "generators/linktv_platform/templates/db/migrate/2204_linktv_platform_create_video_sources.rb",
+    "generators/linktv_platform/templates/db/migrate/2205_linktv_platform_create_videos.rb",
     "init.rb",
     "lib/deep_merge.rb",
     "lib/extensions/active_record.rb",
@@ -618,7 +649,8 @@ Gem::Specification.new do |s|
     "lib/tasks/video_sources.rake",
     "lib/thumbnail_generator.rb",
     "lib/thumbnailer.rb",
-    "lib/yql.rb"
+    "lib/yql.rb",
+    "linktv_platform.gemspec"
   ]
   s.homepage = %q{http://github.com/definitionstudio/linktv_platform}
   s.licenses = ["MIT"]
