@@ -41,6 +41,23 @@ class Image < ActiveRecord::Base
     File.open(pathname, "w") {|f| f.write data}
   end
 
+  def read
+    File.open(pathname, "r").read
+  end
+
+  def copy
+    image = Image.create({
+      :source_url => self.source_url,
+      :attribution => self.attribution,
+      :filename => self.filename})
+    image.write self.read
+    image
+  end
+
+  def copy!
+    copy.save!
+  end
+
   def download
     return true if File.exists?(self.pathname)
     return false unless source_url.present?
